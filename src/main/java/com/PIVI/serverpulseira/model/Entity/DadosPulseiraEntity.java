@@ -1,14 +1,18 @@
 package com.PIVI.serverpulseira.model.Entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 @Data
 @Entity()
 @Table(name = "dados_pulseira")
-public class DadosPulseiraEntity {
+public class DadosPulseiraEntity implements Serializable {
+    private static final long serialVersionUID = 1L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "Dados_ID", nullable = false)
@@ -36,6 +40,7 @@ public class DadosPulseiraEntity {
     private int oxi;
     @Column(name = "temperatura", length = 4)
     private int temp;
+    @JsonFormat(pattern = "dd/MM/yyyy")
     @Column(name = "dataHora")
     private LocalDateTime dataHora;
 

@@ -24,8 +24,13 @@ public class PulseiraEntity {
 
     private int paciente_ID;
 
+    public PulseiraEntity(int paciente_ID) {
+        this.paciente_ID = paciente_ID;
+    }
 
     public void setPulseira_ID(Integer o) {
     }
+
+
 
 }

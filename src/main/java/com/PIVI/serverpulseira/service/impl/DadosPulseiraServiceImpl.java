@@ -37,9 +37,10 @@ public class DadosPulseiraServiceImpl implements DadosPulseiraService {
         dataEntity.setId(null);
         DadosPulseiraEntity newDataEntity = new DadosPulseiraEntity();
 
-       // PulseiraEntity  pulseira = pulseiraService.findById(2);
-        newDataEntity.setPulseiraId(dataEntity.getPulseiraId());
+      // PulseiraEntity  pulseira = pulseiraService.findById(2);
+       // newDataEntity.setPulseiraId(dataEntity.getPulseiraId());
         newDataEntity.setId(null);
+        newDataEntity.setPacienteId(dataEntity.getPulseiraId().getPaciente_ID());
         newDataEntity.setDataHora(LocalDateTime.now());
         newDataEntity.setAx(dataEntity.getAx());
         newDataEntity.setAy(dataEntity.getAy());

@@ -29,7 +29,7 @@ public class PulseiraServiceImpl implements PulseiraService {
     public PulseiraEntity create(PulseiraEntity bracelet){
         bracelet.getPaciente_ID();
         bracelet.setPulseira_ID(null);
-        PulseiraEntity newBraceletEntity = new PulseiraEntity();
+        PulseiraEntity newBraceletEntity = new PulseiraEntity(bracelet.getPaciente_ID());
         newBraceletEntity.setPaciente_ID(bracelet.getPaciente_ID());
         return braceletRepository.save(newBraceletEntity);
 
