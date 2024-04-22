@@ -27,7 +27,7 @@ public class DadosPulseiraController {
     @GetMapping(value = "/{id}")
     public ResponseEntity<DadosPulseiraEntity> findById(@PathVariable Integer id){
         DadosPulseiraEntity obj = dataService.findById(id);
-        return ResponseEntity.ok().body(new DadosPulseiraEntity());
+        return ResponseEntity.ok().body(obj);
     }
     @PostMapping
     public ResponseEntity<DadosPulseiraEntity> create(@RequestBody DadosPulseiraEntity objEntity) {

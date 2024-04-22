@@ -7,6 +7,7 @@ import com.PIVI.serverpulseira.service.PulseiraService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -17,7 +18,7 @@ public class PulseiraServiceImpl implements PulseiraService {
     PulseiraRepository braceletRepository;
 
     public List<PulseiraEntity> findAll(){
-        List<PulseiraEntity> braceletEntityList;
+        List<PulseiraEntity> braceletEntityList = new ArrayList<>();
         braceletEntityList = braceletRepository.findAll();
         return braceletEntityList;
     }

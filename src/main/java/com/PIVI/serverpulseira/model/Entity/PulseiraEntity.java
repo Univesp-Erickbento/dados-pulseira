@@ -13,7 +13,6 @@ import java.util.List;
 public class PulseiraEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
     private int pulseira_ID;
 
 
@@ -26,6 +25,9 @@ public class PulseiraEntity {
 
     public PulseiraEntity(int paciente_ID) {
         this.paciente_ID = paciente_ID;
+    }
+
+    public PulseiraEntity() {
     }
 
     public void setPulseira_ID(Integer o) {

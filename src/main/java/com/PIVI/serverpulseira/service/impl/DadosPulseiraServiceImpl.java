@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -23,7 +24,7 @@ public class DadosPulseiraServiceImpl implements DadosPulseiraService {
    PulseiraServiceImpl pulseiraService;
 
     public List<DadosPulseiraEntity> findAll(){
-        List<DadosPulseiraEntity> dataEntityList;
+        List<DadosPulseiraEntity> dataEntityList = new ArrayList<>();
         dataEntityList = dataRepository.findAll();
         return dataEntityList;
     }

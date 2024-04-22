@@ -18,13 +18,13 @@ public class DadosPulseiraDTO implements Serializable {
 
     private PulseiraEntity pulseiraId;
 
-    private int pacienteId;
+    private Integer pacienteId;
 
     private int freq;
 
     private int oxi;
 
-    @JsonFormat(pattern = "dd/MM/yyyy")
+    @JsonFormat(pattern = "HH:mm:ss dd/MM/yyyy")
     private LocalDateTime dataHora;
 
     public DadosPulseiraDTO(DadosPulseiraEntity obj) {

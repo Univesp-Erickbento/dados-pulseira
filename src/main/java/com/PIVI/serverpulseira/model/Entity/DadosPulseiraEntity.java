@@ -3,6 +3,7 @@ package com.PIVI.serverpulseira.model.Entity;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -21,7 +22,7 @@ public class DadosPulseiraEntity implements Serializable {
     @JoinColumn(name = "pulseira_ID")
     private PulseiraEntity pulseiraId;
 
-    private int pacienteId;
+    private Integer pacienteId;
     @Column(name = "acelerometroX", length = 4)
     private int ax;
     @Column(name = "acelerometroY", length = 4)
@@ -40,10 +41,12 @@ public class DadosPulseiraEntity implements Serializable {
     private int oxi;
     @Column(name = "temperatura", length = 4)
     private int temp;
-    @JsonFormat(pattern = "dd/MM/yyyy")
+    @JsonFormat(pattern = "HH:mm:ss dd/MM/yyyy")
     @Column(name = "dataHora")
     private LocalDateTime dataHora;
 
+    public DadosPulseiraEntity() {
+    }
 
     public void setId(Integer o) {
     }
